@@ -1,17 +1,26 @@
-<img width="180" alt="Screen Shot 2021-10-11 at 7 51 44" src="https://user-images.githubusercontent.com/11070996/136715482-49f3b847-7926-404d-985b-3259d7e20a30.png">
-
-# Copy Git Link
-
 <!-- Plugin description -->
+
+# Intellij Copy Git Link plugin
+
+https://github.com/timabell/intellij-copy-git-link
 
 Provides a shortcut to copy permalink in their online Git repositories from inside IDE.
 
-Works with:
+## About
 
-- GitHub
-- GitLab
-- Bitbucket
-- Azure DevOps
+Fork of https://github.com/kawamataryo/copy-git-link
+
+This fork adds support for Azure DevOps links.
+
+This fork is *not* on the marketplace. Obtain a copy from [releases](https://github.com/timabell/intellij-copy-git-link/releases).
+
+
+## Works with
+
+- GitHub (upstream)
+- GitLab (upstream)
+- Bitbucket (upstream)
+- Azure DevOps (this fork only)
 
 ## Usage
 
