@@ -40,6 +40,16 @@ jobs:
           distribution: zulu
           java-version: 11
 
+      # Update plugin version from git tag
+      - name: Update Plugin Version
+        shell: bash
+        run: |
+          TAG_VERSION="${{ github.ref_name }}"
+          # Strip the 'v' prefix if present
+          VERSION="${TAG_VERSION#v}"
+          echo "Updating plugin version to: $VERSION"
+          sed -i "s/^pluginVersion = .*/pluginVersion = $VERSION/" gradle.properties
+
       # Set environment variables
       - name: Export Properties
         id: properties
