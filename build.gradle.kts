@@ -109,6 +109,11 @@ tasks {
         // https://plugins.jetbrains.com/docs/intellij/deployment.html#specifying-a-release-channel
         channels.set(properties("pluginVersion").map { listOf(it.split('-').getOrElse(1) { "default" }.split('.').first()) })
     }
+
+    runPluginVerifier {
+        // Limit IDE versions to test against existing versions only
+        ideVersions.set(listOf("2022.1.4", "2022.2.5", "2022.3.3", "2023.1.5", "2023.2.6", "2023.3.6", "2024.1.4"))
+    }
 }
 
 tasks.named<Test>("test") {
